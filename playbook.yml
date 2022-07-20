@@ -1,9 +1,9 @@
-—
-– hosts: Linux
+---
+- hosts: Linux
   gather_facts: true
 
   tasks:
-  – name: Upgrade all yum packages
+   -  name: Upgrade all yum packages
     yum:
       name: "*"
       state: latest
