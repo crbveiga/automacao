@@ -6,3 +6,7 @@
     yum:
       name: httpd
       state: latest
+
+- name: authenticate with a Vault app role
+  ansible.builtin.debug:
+      msg: "{{ lookup('hashi_vault', 'secret=secret/hello:value auth_method=approle role_id=59682157-6434-5162-3c09-e8ded522a593 secret_id=05c4eac8-fbfa-1625-4891-98b7dadea73e url=http://192.168.255.36:8200')}}"
